@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 98vh;
+    width: 100vw;
+    background: linear-gradient(to right, rgb(7, 7, 7), rgb(12, 12, 12)), url("../img/heartbg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    overflow-x: hidden;
+    font-family: "Inter", serif;
+    color: #fff !important;
+}
+
+#words {
+    font-family: "Poppins", sans-serif;
+    /* font-size: 24px; */
+    /* color: #f5a0a0; */
+}
+
+canvas {
+    display: block;
+}
+
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to content */
+    z-index: 9999; /* Ensure it's above all other content */
+    background: transparent; /* Make canvas background transparent */
+}
+
+/* Existing content should have lower z-index */
+#mainDiv {
+    position: relative;
+    z-index: 1;
+}
+
+#content {
+    margin-top: 20px !important;
+}
+
+#mainDiv {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+#loveHeart {
+    float: left;
+    width: 670px;
+    height: 620px;
+    position: relative;
+    backdrop-filter: blur(20px);
+}
+
+#garden {
+    width: 100%;
+    height: 100%
+}
+
+#elapseClock {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+#words {
+    font-family: "sans-serif";
+    width: 500px;
+    font-size: 24px;
+    color: #f5a0a0;
+}
+
+#messages {
+    display: none;
+}
+
+.clr {
+    color: #ddf2ff;
+}
+
+#elapseClock .digit {
+    font-family: "digit";
+    font-size: 36px
+}
+
+#loveu {
+    width: 315px;
+    /* padding: 5px; */
+    font-size: 21px;
+    /* margin-top: 80px; */
+    /* margin-right: 120px; */
+    text-align: center;
+    /* color: #ade0ff; */
+    display: none;
+    position: absolute;
+    bottom: -191px;
+    left: 52%;
+    transform: translateX(-50%);
+    /* height: 187px; */
+}
+
+.box2 p{
+    margin-top: -15px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.box3 p {
+    margin-top: -15px;
+}
+
+#loveu .signature {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#clickSound {
+    display: none
+}
+
+#code {
+    float: left;
+    width: 440px;
+    margin-top: 40px !important;
+    height: 400px;
+    color: #d8d8d8;
+    font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+    font-size: 14px;
+}
+
+#code .string {
+    /* color: #ffb500; */
+}
+
+#code .keyword {
+    /* color: #b91db2; */
+    font-weight: bold;
+}
+
+#code .placeholder {
+    margin-left: 15px
+}
+
+#code .space {
+    margin-left: 7px
+}
+
+#code .comments {
+    /* color: #cac9c9e0; */
+}
+.oclr  a{
+    color: #d8d8d8;
+}
+
+a {
+    color: #6a9955;
+    text-decoration: none;
+}
+
+.comments { color: #6a9955; }
+.string { color: #ce9178; }
+.keyword { color: #569cd6; }
+.placeholder { padding-left: 20px; }
+
+#copyright {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    color: #8c8c8c
+}
+
+#errorMsg {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    top: 100px;
+    left: 0
+}
+
+#copyright a {
+    color: #c9c6c6
+}
+
+

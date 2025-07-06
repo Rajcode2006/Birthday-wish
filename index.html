@@ -1,283 +1,394 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-
 <head>
-	<meta name="title" content="">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<style type="text/css">
-		@font-face {
-			font-family: digit;
-			src: url('digital.ttf') format("truetype");
-		}
-	</style>
-	<link href="css/default.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/garden.js"></script>
-	<script type="text/javascript" src="js/functions.js"></script>
-    <script src="https://kit.fontawesome.com/2e95d79f91.js" crossorigin="anonymous"></script>
-    <title>Hapyy Birthday Renesha | RajCode-xs1dd</title>
+    <meta charset="utf-8">
+    <title>Hapy Birthday Sonu- My Happiness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="language" content="zh-CN">
+    <meta name="describe" content="I created this website for my bestie!">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+
+    <style>
+        html, body {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+        .celebrate-btn {
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%) scale(0.9);
+            padding: 1em 2.5em;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ff3e8d, #ff2d69, #ff3e8d);
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 20px 5px #ff3e8d, 0 0 40px 10px #ff2d69;
+            outline: none;
+            transition: box-shadow 0.3s, transform 0.2s, opacity 0.8s cubic-bezier(.4,2,.6,1);
+            animation: glow 1.5s infinite alternate;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .celebrate-btn.show {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) scale(1);
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px 5px #ff3e8d, 0 0 40px 10px #ff2d69;
+                transform: translateX(-50%) scale(1);
+            }
+            to {
+                box-shadow: 0 0 40px 15px #ff3e8d, 0 0 80px 20px #ff2d69;
+                transform: translateX(-50%) scale(1.07);
+            }
+        }
+        .celebrate-btn:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 0 60px 20px #ff3e8d, 0 0 100px 30px #ff2d69;
+        }
+          /* Responsive adjustments for mobile */
+        @media (max-width: 600px) {
+            .celebrate-btn {
+                font-size: 1em;
+                padding: 0.7em 1.5em;
+                bottom: 20px;
+            }
+            .tabs-labels, .tabs-panel {
+                font-size: 0.9em;
+            }
+        }
+        .overlay, .canvas, #canvas {
+            max-width: 100vw;
+            max-height: 100vh;
+        }
+                html, body {
+            touch-action: manipulation; /* Prevent double-tap zoom */
+        }
+    </style>
 </head>
-
 <body>
-	<div id="mainDiv">
-		<div id="content">
-            <div id="code">
-                <span class="comments">// <a href="https://www.instagram.com/raj_rohan0907/"> BIRTHDAY EDITION v1.0</a></span><br>https://www.instagram.com/raj_rohan0907/
-                <span class="comments">// Compiled with Love</span><br><br>
-                
-                const us = {<br>
-                    <span class="placeholder"></span>me: <span class="string"><a href="https://www.instagram.com/raj_rohan0907/" class="string">"Raj"</a></span>,<br>
-                    <span class="placeholder"></span>status: <span class="keyword">"TogetherForever"</span><br>
-                    <span class="placeholder"></span>her: <span class="string"><a href="https://www.instagram.com/raj_rohan0907/" class="string">"Renuuu"</a></span>,<br>
-                };<br><br>
-                
-                <span class="comments">// System Configuration</span><br>
-                her.birthday = {<br>
-                    <span class="placeholder"></span><a href="https://www.instagram.com/raj_rohan0907/" class="string">date: 05, 10, 2005,</a><br>
-                    <span class="placeholder"></span>happinessLevel: MAX_INT<br>
-                };<br><br>
-            
-                <span class="comments">// Core Functions</span><br>
-                function <a href="https://www.instagram.com/raj_rohan0907/" class="string">celebrate()</a> {<br>
-                <span class="placeholder"></span>while(true) {<br>
-                <span class="placeholder"></span><span class="placeholder"></span>sendLove();<br>
-                <span class="placeholder"></span><span class="placeholder"></span><a href="https://www.instagram.com/raj_rohan0907/" class="string">createMemories();</a><br>
-                <span class="placeholder"></span>}<br>
-                }<br><br>
-            
-                <span class="comments">// Execute</span><br>
-                try {<br>
-                <span class="placeholder"></span>celebrate();<br>
-                } catch(myHeart) {<br>
-                <span class="placeholder"></span>console.<a href="https://www.instagram.com/raj_rohan0907/" class="string">error("Impossible</a> to stop loving you");<br>
-                }<br><br>
-            
-                <span class="comments oclr">/* OUTPUT: <br>
-                * <a href="https://www.instagram.com/raj_rohan0907/">You're amazing</a><br>
-                * <a href="https://www.instagram.com/raj_rohan0907/">Best girlfriend ever</a><br>
-                * <a href="https://www.instagram.com/raj_rohan0907/">Happy Birthday! 🎂🎉</a><br>
-                */</span>
+    <canvas id="canvas" style="position:absolute;width:100%;height:100%;z-index:8888"></canvas>
+    <canvas style="position:absolute;width:100%;height:100%;z-index:9999" class="canvas"></canvas>
+    <div class="overlay">
+        <div class="tabs">
+            <div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+            <div class="tabs-panels">
+                <ul class="tabs-panel commands">
+                </ul>
             </div>
-			<div id="loveHeart">
-				<canvas id="garden"></canvas>
-				<div id="words">
-					<div id="messages" class="clr">
-						<div ><a href="https://www.instagram.com/raj_rohan0907/" class="clr">B'day beautiful girl</a> <i class="fa-regular fa-heart"></i></div>
-						<div id="elapseClock"></div>
-					</div>
-					<div id="loveu">
-                        <div class="msgbox">
-                            <div class="box box1">
-                                <p class="clr">So glad to be one of your nearest <a href="https://www.instagram.com/raj_rohan0907/" class="clr"> who gets to say this to u! Love u</a> always forever and ever!!</p>
-                            </div>
-                            <div class="box box2">
-                                <p>Happy Birthday <i class="fa-regular fa-heart"></i></p>
-                            </div>
-                            <div class="box box3 clr">
-                                <p> - <a href="https://www.instagram.com/raj_rohan0907/" class="clr">Raj</a></p>
-                            </div>
-                        </div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="copyright">
-			IG Creator - <a href='https://www.instagram.com/raj_rohan0907/'>@RajCode-xs1dd</a> 
-		</div>
-	</div>
-
-    <canvas id="fireworks"></canvas>
-	<script type="text/javascript">
-		var offsetX = $("#loveHeart").width() / 2;
-		var offsetY = $("#loveHeart").height() / 2 - 55;
-		var together = new Date();
-		together.setFullYear(2005, 10, 5);
-		together.setHours(18);
-		together.setMinutes(0);
-		together.setSeconds(0);
-		together.setMilliseconds(0);
-
-		if (!document.createElement('canvas').getContext) {
-			var msg = document.createElement("div");
-			msg.id = "errorMsg";
-			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
-			document.body.appendChild(msg);
-			$("#code").css("display", "none")
-			$("#copyright").css("position", "absolute");
-			$("#copyright").css("bottom", "10px");
-			document.execCommand("stop");
-		} else {
-			setTimeout(function () {
-				startHeartAnimation();
-			}, 5000);
-
-			timeElapse(together);
-			setInterval(function () {
-				timeElapse(together);
-			}, 500);
-
-			adjustCodePosition();
-			$("#code").typewriter();
-		}
-
-
-        const canvas = document.getElementById('fireworks');
-        const ctx = canvas.getContext('2d');
-
-        // Set canvas to full screen
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        </div>
+    </div>
+    <!-- Celebrate Button (hidden initially) -->
+    <button id="celebrateBtn" class="celebrate-btn">Let's Celebrate 🎉</button>
+    <script>
+        function initVars() {
+            pi = Math.PI;
+            ctx = canvas.getContext("2d");
+            canvas.width = canvas.clientWidth;
+            canvas.height = canvas.clientHeight;
+            cx = canvas.width / 2;
+            cy = canvas.height / 2;
+            playerZ = -25;
+            playerX = playerY = playerVX = playerVY = playerVZ = pitch = yaw = pitchV = yawV = 0;
+            scale = (window.innerWidth < 500) ? 350 : 600;
+            seedTimer = 0; seedInterval = 5, seedLife = 100; gravity = .02;
+            seeds = new Array();
+            sparkPics = new Array();
+            s = "https://cantelope.org/NYE/";
+            for (i = 1; i <= 10; ++i) {
+                sparkPic = new Image();
+                sparkPic.src = s + "spark" + i + ".png";
+                sparkPics.push(sparkPic);
+            }
+            sparks = new Array();
+            pow1 = new Audio(s + "pow1.ogg");
+            pow2 = new Audio(s + "pow2.ogg");
+            pow3 = new Audio(s + "pow3.ogg");
+            pow4 = new Audio(s + "pow4.ogg");
+            frames = 0;
         }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
 
-        // Firework class
-        class Firework {
-            constructor() {
-                this.x = Math.random() * canvas.width; // Random X position
-                this.y = canvas.height;
-                this.radius = 3;
-                this.velocity = {
-                    x: (Math.random() - 0.5) * 2,
-                    y: -(Math.random() * 5 + 12) // Faster initial velocity
+        function rasterizePoint(x, y, z) {
+            var p, d;
+            x -= playerX;
+            y -= playerY;
+            z -= playerZ;
+            p = Math.atan2(x, z);
+            d = Math.sqrt(x * x + z * z);
+            x = Math.sin(p - yaw) * d;
+            z = Math.cos(p - yaw) * d;
+            p = Math.atan2(y, z);
+            d = Math.sqrt(y * y + z * z);
+            y = Math.sin(p - pitch) * d;
+            z = Math.cos(p - pitch) * d;
+            var rx1 = -1000, ry1 = 1, rx2 = 1000, ry2 = 1, rx3 = 0, ry3 = 0, rx4 = x, ry4 = z, uc = (ry4 - ry3) * (rx2 - rx1) - (rx4 - rx3) * (ry2 - ry1);
+            if (!uc) return { x: 0, y: 0, d: -1 };
+            var ua = ((rx4 - rx3) * (ry1 - ry3) - (ry4 - ry3) * (rx1 - rx3)) / uc;
+            var ub = ((rx2 - rx1) * (ry1 - ry3) - (ry2 - ry1) * (rx1 - rx3)) / uc;
+            if (!z) z = .000000001;
+            if (ua > 0 && ua < 1 && ub > 0 && ub < 1) {
+                return {
+                    x: cx + (rx1 + ua * (rx2 - rx1)) * scale,
+                    y: cy + y / z * scale,
+                    d: Math.sqrt(x * x + y * y + z * z)
                 };
-                this.alpha = 1;
-                this.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
-                this.particles = [];
-                this.exploded = false;
+            } else {
+                return {
+                    x: cx + (rx1 + ua * (rx2 - rx1)) * scale,
+                    y: cy + y / z * scale,
+                    d: -1
+                };
             }
+        }
 
-            update() {
-                if (!this.exploded) {
-                    this.velocity.y += 0.1; // Stronger gravity
-                    this.x += this.velocity.x;
-                    this.y += this.velocity.y;
+        function spawnSeed() {
+            seed = new Object();
+            seed.x = -50 + Math.random() * 100;
+            seed.y = 25;
+            seed.z = -50 + Math.random() * 100;
+            seed.vx = .1 - Math.random() * .2;
+            seed.vy = -1.5;
+            seed.vz = .1 - Math.random() * .2;
+            seed.born = frames;
+            seeds.push(seed);
+        }
 
-                    // Random early explosion
-                    if (this.y < canvas.height * 0.25 + Math.random() * 100) {
-                        this.explode();
-                    }
-                }
-
-                // Update particles
-                this.particles.forEach((particle, index) => {
-                    if (particle.alpha <= 0) {
-                        this.particles.splice(index, 1);
-                    } else {
-                        particle.update();
-                    }
-                });
-
-                this.alpha -= 0.01; // Faster fade-out
+        function splode(x, y, z) {
+            t = 5 + parseInt(Math.random() * 150);
+            sparkV = 1 + Math.random() * 2.5;
+            type = parseInt(Math.random() * 3);
+            switch (type) {
+                case 0:
+                    pic1 = parseInt(Math.random() * 10);
+                    break;
+                case 1:
+                    pic1 = parseInt(Math.random() * 10);
+                    do { pic2 = parseInt(Math.random() * 10); } while (pic2 == pic1);
+                    break;
+                case 2:
+                    pic1 = parseInt(Math.random() * 10);
+                    do { pic2 = parseInt(Math.random() * 10); } while (pic2 == pic1);
+                    do { pic3 = parseInt(Math.random() * 10); } while (pic3 == pic1 || pic3 == pic2);
+                    break;
             }
-
-            explode() {
-                this.exploded = true;
-                const baseHue = Math.random() * 360;
-                const particleCount = 150 + Math.random() * 50;
-
-                // Create explosion particles
-                for (let i = 0; i < particleCount; i++) {
-                    const angle = (Math.PI * 2) * (i / particleCount);
-                    const speed = Math.random() * 5 + 2;
-
-                    this.particles.push(new Particle(
-                        this.x,
-                        this.y,
-                        `hsla(${baseHue + (Math.random() * 20 - 10)}, 100%, 70%, 0.8)`,
-                        {
-                            x: Math.cos(angle) * speed + (Math.random() - 0.5),
-                            y: Math.sin(angle) * speed + (Math.random() - 0.5)
+            for (m = 1; m < t; ++m) {
+                spark = new Object();
+                spark.x = x; spark.y = y; spark.z = z;
+                p1 = pi * 2 * Math.random();
+                p2 = pi * Math.random();
+                v = sparkV * (1 + Math.random() / 6)
+                spark.vx = Math.sin(p1) * Math.sin(p2) * v;
+                spark.vz = Math.cos(p1) * Math.sin(p2) * v;
+                spark.vy = Math.cos(p2) * v;
+                switch (type) {
+                    case 0: spark.img = sparkPics[pic1]; break;
+                    case 1:
+                        spark.img = sparkPics[parseInt(Math.random() * 2) ? pic1 : pic2];
+                        break;
+                    case 2:
+                        switch (parseInt(Math.random() * 3)) {
+                            case 0: spark.img = sparkPics[pic1]; break;
+                            case 1: spark.img = sparkPics[pic2]; break;
+                            case 2: spark.img = sparkPics[pic3]; break;
                         }
-                    ));
+                        break;
                 }
-
-                // Add bright core flash
-                this.particles.push(new Particle(this.x, this.y, 'white', { x: 0, y: 0 }, 8, 0.5));
+                spark.radius = 25 + Math.random() * 50;
+                spark.alpha = 1;
+                spark.trail = new Array();
+                sparks.push(spark);
             }
+            switch (parseInt(Math.random() * 4)) {
+                case 0: pow = new Audio(s + "pow1.ogg"); break;
+                case 1: pow = new Audio(s + "pow2.ogg"); break;
+                case 2: pow = new Audio(s + "pow3.ogg"); break;
+                case 3: pow = new Audio(s + "pow4.ogg"); break;
+            }
+            d = Math.sqrt((x - playerX) * (x - playerX) + (y - playerY) * (y - playerY) + (z - playerZ) * (z - playerZ));
+            pow.volume = 1.5 / (1 + d / 10);
+            pow.play();
+        }
 
-            draw() {
-                if (!this.exploded) {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = this.color;
-                    ctx.fill();
+        function doLogic() {
+            if (seedTimer < frames) {
+                seedTimer = frames + seedInterval * Math.random() * 10;
+                spawnSeed();
+            }
+            for (i = 0; i < seeds.length; ++i) {
+                seeds[i].vy += gravity;
+                seeds[i].x += seeds[i].vx;
+                seeds[i].y += seeds[i].vy;
+                seeds[i].z += seeds[i].vz;
+                if (frames - seeds[i].born > seedLife) {
+                    splode(seeds[i].x, seeds[i].y, seeds[i].z);
+                    seeds.splice(i, 1);
                 }
-
-                this.particles.forEach(particle => particle.draw());
             }
-        }
-
-        // Particle class
-        class Particle {
-            constructor(x, y, color, velocity, size = Math.random() * 3 + 1, gravity = 0.1) {
-                this.x = x;
-                this.y = y;
-                this.size = size;
-                this.velocity = velocity;
-                this.color = color;
-                this.alpha = 1;
-                this.gravity = gravity;
-                this.resistance = 0.98;
-                this.fade = Math.random() * 0.02 + 0.01;
-            }
-
-            update() {
-                this.velocity.x *= this.resistance;
-                this.velocity.y *= this.resistance;
-                this.velocity.y += this.gravity;
-
-                this.x += this.velocity.x;
-                this.y += this.velocity.y;
-                this.alpha -= this.fade;
-                this.size *= 0.97;
-            }
-
-            draw() {
-                ctx.save();
-                ctx.globalAlpha = this.alpha;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.fill();
-                ctx.restore();
-            }
-        }
-        // Fireworks array
-        const fireworks = [];
-
-        // Function to launch a firework at random intervals
-        function launchRandomFirework() {
-            fireworks.push(new Firework());
-
-            // Schedule the next firework at a random time (between 0.5s and 2s)
-            setTimeout(launchRandomFirework, Math.random() * 1500 + 500);
-        }
-
-        // Start launching fireworks
-        launchRandomFirework();
-
-        // Animation loop
-        function animate() {
-            // ctx.fillStyle = 'rgba(0, 0, 0, 0.08)'; // Smoother trails
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            fireworks.forEach((firework, index) => {
-                firework.update();
-                firework.draw();
-                if (firework.alpha <= 0) {
-                    fireworks.splice(index, 1);
+            for (i = 0; i < sparks.length; ++i) {
+                if (sparks[i].alpha > 0 && sparks[i].radius > 5) {
+                    sparks[i].alpha -= .01;
+                    sparks[i].radius /= 1.02;
+                    sparks[i].vy += gravity;
+                    point = new Object();
+                    point.x = sparks[i].x;
+                    point.y = sparks[i].y;
+                    point.z = sparks[i].z;
+                    if (sparks[i].trail.length) {
+                        x = sparks[i].trail[sparks[i].trail.length - 1].x;
+                        y = sparks[i].trail[sparks[i].trail.length - 1].y;
+                        z = sparks[i].trail[sparks[i].trail.length - 1].z;
+                        d = ((point.x - x) * (point.x - x) + (point.y - y) * (point.y - y) + (point.z - z) * (point.z - z));
+                        if (d > 9) {
+                            sparks[i].trail.push(point);
+                        }
+                    } else {
+                        sparks[i].trail.push(point);
+                    }
+                    if (sparks[i].trail.length > 5) sparks[i].trail.splice(0, 1);
+                    sparks[i].x += sparks[i].vx;
+                    sparks[i].y += sparks[i].vy;
+                    sparks[i].z += sparks[i].vz;
+                    sparks[i].vx /= 1.075;
+                    sparks[i].vy /= 1.075;
+                    sparks[i].vz /= 1.075;
+                } else {
+                    sparks.splice(i, 1);
                 }
-            });
-
-            requestAnimationFrame(animate);
+            }
+            p = Math.atan2(playerX, playerZ);
+            d = Math.sqrt(playerX * playerX + playerZ * playerZ);
+            d += Math.sin(frames / 80) / 1.25;
+            t = Math.sin(frames / 200) / 40;
+            playerX = Math.sin(p + t) * d;
+            playerZ = Math.cos(p + t) * d;
+            yaw = pi + p + t;
         }
 
-        // Start animation
-        animate();
-	</script>
+        function rgb(col) {
+            var r = parseInt((.5 + Math.sin(col) * .5) * 16);
+            var g = parseInt((.5 + Math.cos(col) * .5) * 16);
+            var b = parseInt((.5 - Math.sin(col) * .5) * 16);
+            return "#" + r.toString(16) + g.toString(16) + b.toString(16);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, cx * 2, cy * 2);
+
+            ctx.fillStyle = "#ff8";
+            for (i = -100; i < 100; i += 3) {
+                for (j = -100; j < 100; j += 4) {
+                    x = i; z = j; y = 25;
+                    point = rasterizePoint(x, y, z);
+                    if (point.d != -1) {
+                        size = 250 / (1 + point.d);
+                        d = Math.sqrt(x * x + z * z);
+                        a = 0.75 - Math.pow(d / 100, 6) * 0.75;
+                        if (a > 0) {
+                            ctx.globalAlpha = a;
+                            ctx.fillRect(point.x - size / 2, point.y - size / 2, size, size);
+                        }
+                    }
+                }
+            }
+            ctx.globalAlpha = 1;
+            for (i = 0; i < seeds.length; ++i) {
+                point = rasterizePoint(seeds[i].x, seeds[i].y, seeds[i].z);
+                if (point.d != -1) {
+                    size = 200 / (1 + point.d);
+                    ctx.fillRect(point.x - size / 2, point.y - size / 2, size, size);
+                }
+            }
+            point1 = new Object();
+            for (i = 0; i < sparks.length; ++i) {
+                point = rasterizePoint(sparks[i].x, sparks[i].y, sparks[i].z);
+                if (point.d != -1) {
+                    size = sparks[i].radius * 200 / (1 + point.d);
+                    if (sparks[i].alpha < 0) sparks[i].alpha = 0;
+                    if (sparks[i].trail.length) {
+                        point1.x = point.x;
+                        point1.y = point.y;
+                        switch (sparks[i].img) {
+                            case sparkPics[0]: ctx.strokeStyle = "#f84"; break;
+                            case sparkPics[1]: ctx.strokeStyle = "#84f"; break;
+                            case sparkPics[2]: ctx.strokeStyle = "#8ff"; break;
+                            case sparkPics[3]: ctx.strokeStyle = "#fff"; break;
+                            case sparkPics[4]: ctx.strokeStyle = "#4f8"; break;
+                            case sparkPics[5]: ctx.strokeStyle = "#f44"; break;
+                            case sparkPics[6]: ctx.strokeStyle = "#f84"; break;
+                            case sparkPics[7]: ctx.strokeStyle = "#84f"; break;
+                            case sparkPics[8]: ctx.strokeStyle = "#fff"; break;
+                            case sparkPics[9]: ctx.strokeStyle = "#44f"; break;
+                        }
+                        for (j = sparks[i].trail.length - 1; j >= 0; --j) {
+                            point2 = rasterizePoint(sparks[i].trail[j].x, sparks[i].trail[j].y, sparks[i].trail[j].z);
+                            if (point2.d != -1) {
+                                ctx.globalAlpha = j / sparks[i].trail.length * sparks[i].alpha / 2;
+                                ctx.beginPath();
+                                ctx.moveTo(point1.x, point1.y);
+                                ctx.lineWidth = 1 + sparks[i].radius * 10 / (sparks[i].trail.length - j) / (1 + point2.d);
+                                ctx.lineTo(point2.x, point2.y);
+                                ctx.stroke();
+                                point1.x = point2.x;
+                                point1.y = point2.y;
+                            }
+                        }
+                    }
+                    ctx.globalAlpha = sparks[i].alpha;
+                    ctx.drawImage(sparks[i].img, point.x - size / 2, point.y - size / 2, size, size);
+                }
+            }
+        }
+
+        function frame() {
+            if (frames > 100000) {
+                seedTimer = 0;
+                frames = 0;
+            }
+            frames++;
+            draw();
+            doLogic();
+            requestAnimationFrame(frame);
+        }
+
+        window.addEventListener("resize", () => {
+            canvas.width = canvas.clientWidth;
+            canvas.height = canvas.clientHeight;
+            cx = canvas.width / 2;
+            cy = canvas.height / 2;
+        });
+
+        // Show the button after 5 seconds (or after your animation/output is done)
+        function showCelebrateButton() {
+            document.getElementById('celebrateBtn').classList.add('show');
+        }
+        
+        // Button click navigation
+        document.getElementById('celebrateBtn').addEventListener('click', function() {
+    window.location.href = 'new.html';
+});
+document.addEventListener('touchmove', function(event) {
+    if (event.scale !== 1) { event.preventDefault(); }
+}, { passive: false });
+function enableAudio() {
+    pow1.play().catch(()=>{});
+    pow2.play().catch(()=>{});
+    pow3.play().catch(()=>{});
+    pow4.play().catch(()=>{});
+    document.body.removeEventListener('touchstart', enableAudio);
+}
+document.body.addEventListener('touchstart', enableAudio);
+        initVars();
+        frame();
+    </script>
+    <script src="js/index.js"></script>
 </body>
-
 </html>

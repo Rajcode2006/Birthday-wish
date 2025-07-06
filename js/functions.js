@@ -79,32 +79,29 @@ function startHeartAnimation() {
 				if (b >= c.length) {
 					clearInterval(e)
 				}
-			}, 75)
+			}, 30)
 		});
 		return this
 	}
 })(jQuery);
 
 function timeElapse(c) {
-	var e = Date();
-	var f = (Date.parse(e) - Date.parse(c)) / 1000;
-	var g = Math.floor(f / (3600 * 24));
-	f = f % (3600 * 24);
-	var b = Math.floor(f / 3600);
-	if (b < 10) {
-		b = "0" + b
-	}
-	f = f % 3600;
-	var d = Math.floor(f / 60);
-	if (d < 10) {
-		d = "0" + d
-	}
-	f = f % 60;
-	if (f < 10) {
-		f = "0" + f
-	}
-	var a = '<span class="digit">' + g + '</span> days <span class="digit">' + b + '</span> hours <span class="digit">' + d + '</span> minutes <span class="digit">' + f + "</span> seconds";
-	$("#elapseClock").html(a)
+    var now = new Date();
+    var diff = now - c; // difference in ms
+
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    var minutes = Math.floor((diff / (1000 * 60)) % 60);
+    var seconds = Math.floor((diff / 1000) % 60);
+
+    // Pad with zeros if needed
+    function pad(n) { return n < 10 ? '0' + n : n; }
+
+    var a = '<span class="digit">' + days + '</span> days ' +
+            '<span class="digit">' + pad(hours) + '</span> hours ' +
+            '<span class="digit">' + pad(minutes) + '</span> minutes ' +
+            '<span class="digit">' + pad(seconds) + '</span> seconds';
+    $("#elapseClock").html(a);
 }
 
 function showMessages() {

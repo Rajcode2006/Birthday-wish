@@ -3,15 +3,22 @@ var clientWidth = $(window).width();
 var clientHeight = $(window).height();
 $(function () {
 	$loveHeart = $("#loveHeart");
-	var a = $loveHeart.width() / 2;
-	var b = $loveHeart.height() / 2 - 55;
+	$(document).ready(function () {
+		var a = $("#loveHeart").width() / 2;
+		var b = $("#loveHeart").height() / 2 - 55;
+		startHeartAnimation();
+	});
 	$garden = $("#garden");
 	gardenCanvas = $garden[0];
 	gardenCanvas.width = $("#loveHeart").width();
 	gardenCanvas.height = $("#loveHeart").height();
 	gardenCtx = gardenCanvas.getContext("2d");
 	gardenCtx.globalCompositeOperation = "lighter";
-	garden = new Garden(gardenCtx, gardenCanvas);
+	if (typeof Garden === 'undefined') {
+		console.error("Garden is not loaded correctly.");
+	} else {
+		garden = new Garden(gardenCtx, gardenCanvas);
+	}
 	$("#content").css("width", $loveHeart.width() + $("#code").width());
 	$("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
 	$("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2 - 50, 10));
@@ -20,11 +27,14 @@ $(function () {
 		garden.render()
 	}, Garden.options.growSpeed)
 });
+let hasReloaded = false;
+
 $(window).resize(function () {
 	var b = $(window).width();
 	var a = $(window).height();
-	if (b != clientWidth && a != clientHeight) {
-		location.replace(location)
+	if (!hasReloaded && (Math.abs(b - clientWidth) > 50 || Math.abs(a - clientHeight) > 50)) {
+		hasReloaded = true;
+		location.reload();
 	}
 });
 
@@ -86,22 +96,22 @@ function startHeartAnimation() {
 })(jQuery);
 
 function timeElapse(c) {
-    var now = new Date();
-    var diff = now - c; // difference in ms
+	var now = new Date();
+	var diff = now - c; // difference in ms
 
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    var minutes = Math.floor((diff / (1000 * 60)) % 60);
-    var seconds = Math.floor((diff / 1000) % 60);
+	var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+	var minutes = Math.floor((diff / (1000 * 60)) % 60);
+	var seconds = Math.floor((diff / 1000) % 60);
 
-    // Pad with zeros if needed
-    function pad(n) { return n < 10 ? '0' + n : n; }
+	// Pad with zeros if needed
+	function pad(n) { return n < 10 ? '0' + n : n; }
 
-    var a = '<span class="digit">' + days + '</span> days ' +
-            '<span class="digit">' + pad(hours) + '</span> hours ' +
-            '<span class="digit">' + pad(minutes) + '</span> minutes ' +
-            '<span class="digit">' + pad(seconds) + '</span> seconds';
-    $("#elapseClock").html(a);
+	var a = '<span class="digit">' + days + '</span> days ' +
+		'<span class="digit">' + pad(hours) + '</span> hours ' +
+		'<span class="digit">' + pad(minutes) + '</span> minutes ' +
+		'<span class="digit">' + pad(seconds) + '</span> seconds';
+	$("#elapseClock").html(a);
 }
 
 function showMessages() {
@@ -118,7 +128,7 @@ function adjustWordsPosition() {
 }
 
 function adjustCodePosition() {
-	$("#code").css("margin-top", ($("#garden").height() - $("#code").height()) / 2)
+	$("#code").css("margin-top", ($("#garden").height() - $("#code").height()) / 2 + "px")
 }
 
 function showLoveU() {

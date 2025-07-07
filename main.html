@@ -1,35 +1,84 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="title" content="">
+    <meta property="og:title" content="Happy Birthday Sonu ❤️ | RajCode">
+    <meta property="og:description" content="A personalized birthday surprise created with love for Sonu.">
+    <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+    <meta property="og:type" content="website">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, orientation=landscape">
     <style type="text/css">
         @font-face {
             font-family: digit;
             src: url('digital.ttf') format("truetype");
+        }
 
-            html,
-            body {
-                width: 100vw;
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                touch-action: manipulation;
-                /* Prevent double-tap zoom on mobile */
-            }
+        #copyright {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1em;
+            z-index: 1001;
+        }
 
-            #fireworks {
-                display: block;
-                width: 100vw !important;
-                height: 100vh !important;
-                max-width: 100vw;
-                max-height: 100vh;
-                pointer-events: none;
-                /* So it doesn't block UI */
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overscroll-behavior: contain;
+            overflow: hidden;
+            touch-action: manipulation;
+            /* Prevent double-tap zoom on mobile */
+        }
+
+        html {
+            font-size: 2vw;
+            /* scales with viewport width automatically */
+        }
+
+        @media (orientation: portrait) {
+            html {
+                font-size: 3.5vw;
+                /* larger for portrait narrow screens */
             }
+        }
+
+        #mainDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #copyright {
+            flex-shrink: 0;
+        }
+
+
+
+        body {
+            background: linear-gradient(180deg, #000000, #000000);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #fireworks {
+            display: block;
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: 100vw;
+            max-height: 100vh;
+            pointer-events: none;
+            /* So it doesn't block UI */
         }
 
         @media (max-width: 600px) {
@@ -40,13 +89,31 @@
                 top: 0;
             }
 
+            #code {
+                padding-top: 20px;
+                /* ✅ SHIFT TEXT UPWARD SAFELY */
+            }
+
+            #code {
+                margin-top: -60px;
+            }
+
+
+
             .box,
             .msgbox,
             #loveHeart,
-            #content,
+            #content {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+
+
+
             #code {
                 font-size: 1em !important;
-                padding: 0.5em !important;
+                padding-top: 20px !important;
+                /* safe upward shift */
                 margin: 0 !important;
                 /* Add more adjustments as needed for your layout */
             }
@@ -101,14 +168,14 @@
                 <span class="placeholder"></span>while(true) {<br>
                 <span class="placeholder"></span><span class="placeholder"></span>sendLove();<br>
                 <span class="placeholder"></span><span class="placeholder"></span><a
-                    href="https://www.instagram.com/raj_rohan0907/" class="string">createMemories();</a><br>
+                    href="https://www.instagram.com/raj_rohan0907/" class="string"></a><br>
                 <span class="placeholder"></span>}<br>
                 }<br><br>
 
                 <span class="comments">// Execute</span><br>
-                try {<br>
-                <span class="placeholder"></span>celebrate();<br>
-                } catch(myHeart) {<br>
+                <br>
+                <span class="placeholder"></span><br>
+                 catch(myHeart) {<br>
                 <span class="placeholder"></span>console.<a href="https://www.instagram.com/raj_rohan0907/"
                     class="string">error("Impossible</a> to stop loving you");<br>
                 }<br><br>
@@ -193,6 +260,8 @@
             ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
             ctx.scale(dpr, dpr);
         }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas(); // call initially
         // Firework class
         class Firework {
             constructor() {

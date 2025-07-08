@@ -8,11 +8,10 @@
     <meta property="og:type" content="website">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, orientation=landscape">
     <style type="text/css">
         @font-face {
-            font-family: digit;
-            src: url('digital.ttf') format("truetype");
+            font-family: 'RajCode';
+            src: url('RajCode.ttf') format("truetype");
         }
 
         #copyright {
@@ -25,29 +24,61 @@
             z-index: 1001;
         }
 
-        html,
-        body {
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            overscroll-behavior: contain;
-            overflow: hidden;
-            touch-action: manipulation;
-            /* Prevent double-tap zoom on mobile */
-        }
+        @media only screen and (orientation: portrait) {
+            #mainDiv {
+                display: none;
+            }
 
-        html {
-            font-size: 2vw;
-            /* scales with viewport width automatically */
-        }
-
-        @media (orientation: portrait) {
-            html {
-                font-size: 3.5vw;
-                /* larger for portrait narrow screens */
+            #rotate-notice {
+                display: block;
+                position: absolute;
+                top: 40%;
+                width: 100%;
+                text-align: center;
+                color: white;
+                font-size: 5vw;
+                z-index: 10000;
             }
         }
+
+        @media only screen and (max-width: 900px) and (orientation: landscape) {
+            #loveHeart {
+                width: 80vw;
+                height: auto;
+                max-width: 600px;
+            }
+
+            #code {
+                width: 75vw;
+                height: auto;
+                font-size: 12px;
+            }
+
+            #words {
+                width: 80vw;
+                font-size: 4vw;
+            }
+
+            #loveu {
+                width: 80vw;
+                font-size: 4vw;
+            }
+
+            #elapseClock .digit {
+                font-size: 5vw;
+            }
+        }
+
+        /* Desktop and large screens: retain existing sizing and scaling */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
 
         #mainDiv {
             display: flex;
@@ -80,6 +111,19 @@
             pointer-events: none;
             /* So it doesn't block UI */
         }
+
+        @media (orientation: landscape) {
+            #rotate-notice {
+                display: none;
+            }
+        }
+
+        @media (orientation: portrait) {
+            #main-content {
+                display: none;
+            }
+        }
+
 
         @media (max-width: 600px) {
             #fireworks {
@@ -128,6 +172,7 @@
         }
     </style>
     <link href="css/default.css" type="text/css" rel="stylesheet">
+    <link rel="preload" href="RajCode.ttf" as="font" type="font/ttf" crossorigin>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         document.addEventListener('touchmove', function (event) {
@@ -141,8 +186,9 @@
 </head>
 
 <body>
+    <div id="rotate-notice">📱 Please rotate your device to landscape for the best experience 💖</div>
     <div id="mainDiv">
-        <div id="content">
+        <div id="main-content">
             <div id="code">
                 <span class="comments">// <a href="https://www.instagram.com/raj_rohan0907/"> BIRTHDAY EDITION
                         v1.0</a></span><br>https://www.instagram.com/raj_rohan0907/
@@ -175,7 +221,7 @@
                 <span class="comments">// Execute</span><br>
                 <br>
                 <span class="placeholder"></span><br>
-                 catch(myHeart) {<br>
+                catch(myHeart) {<br>
                 <span class="placeholder"></span>console.<a href="https://www.instagram.com/raj_rohan0907/"
                     class="string">error("Impossible</a> to stop loving you");<br>
                 }<br><br>
@@ -306,7 +352,7 @@
                 this.exploded = true;
                 const baseHue = Math.random() * 360;
                 const isMobile = window.innerWidth < 600;
-                const particleCount = (isMobile ? 60 : 150) + Math.random() * (isMobile ? 20 : 50);
+                const particleCount = (isMobile ? 40 : 120) + Math.random() * (isMobile ? 10 : 40);
                 // Create explosion particles
                 for (let i = 0; i < particleCount; i++) {
                     const angle = (Math.PI * 2) * (i / particleCount);
@@ -382,7 +428,7 @@
             fireworks.push(new Firework());
 
             // Schedule the next firework at a random time (between 0.5s and 2s)
-            setTimeout(launchRandomFirework, Math.random() * 700 + 300);
+            setTimeout(launchRandomFirework, Math.random() * 1000 + 800);
         }
 
         // Start launching fireworks

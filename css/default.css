@@ -191,5 +191,27 @@ a {
 #copyright a {
     color: #c9c6c6
 }
-
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    #loveHeart {
+        width: 80vw; /* scale down for small landscape screens */
+        max-width: none;
+        aspect-ratio: 1/1;
+    }
+    #code {
+        width: 70vw; /* scale down code frame */
+        height: auto;
+        font-size: 12px;
+    }
+    #words {
+        width: 80vw;
+        font-size: 4vw;
+    }
+    #loveu {
+        width: 70vw;
+        font-size: 4vw;
+    }
+    #elapseClock .digit {
+        font-size: 5vw;
+    }
+}
 

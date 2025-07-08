@@ -42,6 +42,9 @@
         }
 
         @media only screen and (max-width: 900px) and (orientation: landscape) {
+             #mainDiv {
+        transform-origin: top center;
+            }
             #loveHeart {
                 width: 80vw;
                 height: auto;
@@ -262,6 +265,33 @@
             IG Creator - <a href='https://www.instagram.com/raj_rohan0907/'>@RajCode-xs1dd</a>
         </div>
     </div>
+    <script>
+function scaleToFit() {
+    const mainDiv = document.getElementById('mainDiv');
+    const isLandscapeMobile = window.innerWidth < 900 && window.innerWidth > window.innerHeight;
+
+    if (isLandscapeMobile) {
+        // Reset scaling
+        mainDiv.style.transform = 'scale(1)';
+
+        // Measure after reset
+        const mainHeight = mainDiv.offsetHeight;
+        const windowHeight = window.innerHeight;
+
+        // Calculate scale factor
+        const scaleFactor = windowHeight / mainHeight;
+
+        // Apply scaling, but clamp to max 1
+        mainDiv.style.transform = `scale(${Math.min(scaleFactor, 1)})`;
+    } else {
+        mainDiv.style.transform = 'scale(1)';
+    }
+}
+
+// Call initially
+window.addEventListener('load', scaleToFit);
+window.addEventListener('resize', scaleToFit);
+</script>
 
     <canvas id="fireworks" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1000;"></canvas>
     <script type="text/javascript">
